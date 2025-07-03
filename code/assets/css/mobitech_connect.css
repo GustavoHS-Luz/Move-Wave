@@ -1,0 +1,723 @@
+/* reset e ajustes de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* configuraçao body e html para ocupar toda a altura da tela */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* estilos para o cabeçalho */
+.navbar {
+    background-color: #3471A6;
+    color: aliceblue;
+}
+
+
+
+
+/* novo estilo para o icone de perfil com emoji */
+.navbar-profile {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
+    background-image: 
+    radial-gradient(rgba(63, 142, 191, 0.24) 30%, rgba(15, 14, 14, 0.315) 100%),
+    linear-gradient(to bottom,#3586D2, #3b668c 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main.content {
+    flex: 1; 
+    width: 100%;
+    background-image: 
+    radial-gradient(rgba(63, 142, 191, 0.24) 30%, rgba(15, 14, 14, 0.315) 100%),
+    linear-gradient(to bottom,#3586D2, #3b668c 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: auto;
+}
+.main-content-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+}
+/* Estilos para as postagens */
+.posts-container {
+    margin: 20px auto; 
+    max-width: 900px; 
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.post {
+    background-color: #DCE9EF;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.post img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; 
+}
+
+.post-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.post-content {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.post-author {
+    font-size: 1.1rem;
+    color: #3f8ebf;
+}
+
+/* estilos do rodape */
+footer {
+    background-color: #DCE9EF;
+    color: #363F70;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.copyright, .address, .contact {
+    margin-bottom: 0.5rem;
+}
+
+.social-media {
+    margin-top: 1rem;
+}
+
+.social-media span {
+    margin-right: 1rem;
+}
+
+.social-media a {
+    color: #363F70;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #66b3ff;
+}
+
+/* titulo feed de postagens */
+.feed-title {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: white; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+}
+
+.feed-title:hover {
+    color: #1d2a47; 
+    cursor: pointer; 
+}
+
+.post:hover {
+    background-color: #cceeff; 
+    transition: background-color 0.3s ease;
+}
+
+/* botões de reação */
+.reaction-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.reaction-buttons button {
+    background-color: #3f8ebf;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reaction-buttons button:hover {
+    background-color: #2e6f99;
+}
+
+.reaction-buttons button:active {
+    background-color: #1f4d6d;
+}
+
+.reaction-buttons .like-count, .reaction-buttons .dislike-count {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* botão de like */
+.like-btn.liked {
+    background-color: #4CAF50; 
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.reaction-buttons {
+    justify-content: center; 
+    gap: 0; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.comment-section {
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 0.75rem;
+}
+
+.comment-toggle-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.comment-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.comment-box {
+    margin-top: 0.75rem;
+    display: none;
+}
+
+.comment-input {
+    width: 100%;
+    resize: vertical;
+    min-height: 60px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.submit-comment-btn {
+    margin-top: 0.5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.submit-comment-btn:hover {
+    background-color: #1e7e34;
+}
+
+.comment-list {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.comment-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-header {
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-body {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #222;
+    flex: 1;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.comment-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid #dce9ef;
+    margin-top: 2px;
+}
+
+.comment-user {
+    font-weight: bold;
+    color: #222;
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.comment-text {
+    color: #222;
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.comment-time {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.comment-like {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.2s;
+}
+
+.comment-like:hover {
+    color: #c0392b;
+}
+
+.comment-reply {
+    background: none;
+    border: none;
+    color: #2466BC;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.view-all-comments {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-left: 48px;
+    margin-top: 2px;
+    text-align: left;
+}
+
+/* LARISSA: */
+
+/* Container da busca com caixa branca */
+/* Container da busca refinado */
+.search-container {
+    margin: 4%;
+    display: flex;
+    width: auto;
+    gap: 0;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+}
+
+/* Campo de input refinado */
+#search-input {
+   width: 100%;
+    padding: 12px 20px;
+    border: none;
+ 
+    font-size: 0.95rem;
+    outline: none;
+    background: transparent;
+}
+
+/* Botão de pesquisa */
+#search-button {
+    padding: 0 20px;
+    background-color: #2a3d66;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#search-button:hover {
+    background-color: #2a6a8f;
+}
+
+/* Efeito de foco moderno */
+#search-input:focus {
+    background-color: #f8fafc;
+}
+
+
+
+
+
+/* Estilos para o cabeçalho do feed */
+.feed-aside{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+    grid-column: 1/2;
+
+}
+.feed-content{
+       grid-column: 2/5;
+        border: #3586D2 solid 2px;
+        border-bottom: none;
+        border-top: none;
+}
+.search-sidebar{
+       grid-column: 5/6;
+       display: flex;
+       align-items: start;
+       justify-content: center;
+       
+}
+.feed-header {
+   display: flex;
+   flex-direction: column;
+    height: auto;
+    height: 20vh;
+    gap: 20px;
+    
+     /* Para posicionamento absoluto do botão */
+}
+
+/* Estilo do título (centralizado) */
+.feed-title {
+    text-align: center;
+    color: #DCE9EF;
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+    display: flex;
+    align-items: center;
+    border: #3586D2 solid 2px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    
+}
+
+/* Estilo do botão Criar Post (à esquerda e maior) */
+#createPostBtn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    width: auto;
+    align-self: center;
+    font-weight: bold;
+    background-color: #1a92fc;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+ 
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+#createPostBtn:hover {
+    background-color: #2a6a8f;
+    transform: scale(1.05);
+}
+
+#createPostBtn:active {
+    transform: scale(0.98);
+}
+
+
+        .emergency-contacts {
+            margin: 0 10px;
+            background-color: #0A192F; /* Azul bem escuro para o fundo */
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: #E0E0E0; /* Cor do texto principal para contraste */
+        }
+        .emergency-contacts h3 {
+            color: #007BFF; /* Azul mais normal para o título */
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #425F7F; /* Tom de azul mais claro para a borda */
+            padding-bottom: 8px;
+        }
+        .emergency-card {
+            background-color: #112240; /* Azul escuro ligeiramente mais claro que o fundo principal */
+            border-left: 4px solid #007BFF; /* Mantém a cor vibrante da borda com azul normal */
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        .emergency-card:hover {
+            transform: translateX(5px);
+            background-color: #1E3050; /* Azul um pouco mais claro no hover para feedback visual */
+        }
+        .emergency-card p {
+            margin: 0;
+            color: #E0E0E0; /* Cor do texto para contraste */
+        }
+        .emergency-card strong {
+            color: #007BFF; /* Azul mais normal para os números de telefone */
+            font-size: 1.1rem;
+        }
+        
+@media (max-width: 768px) {
+  /* Grid vira coluna única */
+  .main-content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ordem dos blocos */
+  .search-sidebar {
+    order: -1; /* Vai para o topo */
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .feed-aside {
+    order: 0;
+  }
+
+  .feed-content {
+    order: 1;
+  }
+
+  /* A barra de pesquisa ocupa quase toda a largura */
+  .search-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  /* Título menor */
+  .feed-title {
+    font-size: 1.8rem;
+  }
+
+  /* Botão Criar Post centralizado */
+  #createPostBtn {
+    align-self: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .emergency-contacts{
+    display: none;
+  }
+  .feed-header{
+    gap: 0px;
+  }
+}
+
+/* --- Comentários estilo rede social (Instagram/Twitter) --- */
+.comment {
+  background: #f8fafd;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #e3e8ee;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #dce9ef;
+}
+
+.comment-user {
+  font-weight: bold;
+  color: #2466BC;
+  font-size: 1rem;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: auto;
+}
+
+.comment-body {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 6px;
+  margin-left: 46px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 46px;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.like-btn:hover {
+  color: #c0392b;
+}
+
+#imagePreview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Estilos para os tipos de problema */
+.problem-types {
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.problem-types strong {
+    color: #3f8ebf;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.problem-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.problem-tag {
+    background-color: #3f8ebf;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 2px;
+    white-space: nowrap;
+}
+
+.problem-tag:hover {
+    background-color: #2e6f99;
+    transition: background-color 0.3s ease;
+}
+
+.problem-types.top-right {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    text-align: right;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    width: auto;
+    z-index: 2;
+}
