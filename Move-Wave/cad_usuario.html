@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cad_usuario.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Cadastro do Usuário</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="assets/img/movewave-logo.png" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="comentarios.html">Mobitech Connect</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pag_mapa.html">Mapa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="informações.html">Informações</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="acesso_prefeitura.html">Acesso da prefeitura</a>
+                            </li>    
+                        </ul>
+                        <!-- Ícone de login no canto direito -->
+                        <div class="d-flex">
+                            <a href="pag_login.html" class="nav-link text-light">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <a href="#" class="nav-link text-light" id="settings-icon-link" style="display:none;">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="user-popup" class="user-popup" style="display:none;">
+          <div class="user-popup-content">
+            <div class="user-popup-title">Configurações do Usuário</div>
+            <div class="user-email">usuário@exemplo.com</div>
+            <button class="user-change-password">Alterar Senha</button>
+            <button class="user-logout">Sair</button>
+          </div>
+        </div>
+        <main class="content">
+            <div class="cadastro-campo">
+                <section class="cadastro" id="cadastro-info">
+                    <div class="cadastro-content">
+                        <div class="cad-infos">
+                            <h1>SEJA BEM VINDO !</h1>
+                            <div class="cad-textos">
+                                <p>Preencha o formulário ao lado com os dados necessarios para poder acessar a conta como usuário.</p>
+                            </div>
+                            <p id="info-botao">
+                                Já tem uma conta? Clique no botão abaixo para fazer login
+                             </p>
+                             <div class="cad-bottom">
+                                <button class="botao btn-voltar" id="btn-voltar">LOGIN</button>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </section>
+                <section class="cadastro" id="cadastro-area">
+                    <div class="form-container form-cad">
+                        <form class="form-prefeitura form-cad">
+                            <div class="form-dado form-cad ">
+                                <label for="nome_usuario">NOME</label>
+                                <input type="text" id="nome_usuario" class="info-input" required>
+                            </div>
+                            <div class="form-dado form-cad">
+                                <label for="email">E-MAIL</label>
+                                <input type="email" id="email" class="info-input" required>
+                            </div>
+                            <div class="form-dado form-cad">
+                            <label for="telefone">TELEFONE</label>
+                            <input type="tel" id="telefone" class="info-input" required>
+                            </div>
+                            <div class="form-dado form-cad">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" class="info-input" required>
+                            </div>
+                             <div class="form-dado form-cad">
+                                <label for="bairro">BAIRRO</label>
+                                <input type="text" id="bairro" class="info-input" required>
+                            </div>
+                            <div class="form-dado form-cad">
+                                <label for="senha">SENHA</label>
+                                <input type="password" id="senha" class="info-input" required>
+                            </div>
+                            <div class="form-dado form-cad">
+                                <label for="senha-confirmar">CONFIRMAÇÃO DE SENHA</label>
+                                <input type="password" id="senha-confirmar" class="info-input" required>
+                            </div>
+                            <div class="cad-bottom">
+                                <button type="submit" class="botao" id="btn-cadastro">CADASTRAR</button>
+                            </div>
+                            <div style="text-align: center; margin-top: 15px; font-size: 14px; color: white;">
+                                É da prefeitura? <a href="cad_prefeitura.html" style="color: #007bff; text-decoration: none; font-weight: bold;">cadastre-se aqui</a>.
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>© 2025 Mobitech Urban. Todos os direitos reservados.</p>
+                </div>
+                <div class="address">
+                    <p>Avenida Dom José Gaspar, 500, Belo Horizonte – MG</p>
+                </div>
+                <div class="contact">
+                    <p>(31) 4556-2025 | atendimento@mobtechurban.com.br</p>
+                </div>
+                <div class="social-media">
+                    <span>Signore:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/cad_usuario.js"></script>
+</body>
+</html>

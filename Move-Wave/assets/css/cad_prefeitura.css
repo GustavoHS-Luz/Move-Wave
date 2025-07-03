@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    
+}
+/*cabecalho*/
+.navbar{
+    background: none;
+}
+
+
+/*corpo*/
+body{
+    height: auto;
+    background-image: 
+    radial-gradient(rgba(63, 142, 191, 0.24) 30%, rgba(15, 14, 14, 0.315) 100%),
+    linear-gradient(to bottom,#3586D2, #3b668c 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+main.content{
+    height: auto;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cadastro-campo{
+    width: 80vw;
+    height: auto;
+    margin: 4%;
+    background: radial-gradient(
+        circle at center,
+        #123e77 10%,
+        #0C223D 100%
+        
+      );
+    border-radius: 2rem;
+    color: aliceblue;
+    box-shadow: rgba(17, 12, 46, 0.233) 0px 48px 100px 0px;
+}
+.cadastro{
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    padding: 10%;
+}
+.cadastro-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+.cad-infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+.cad-infos h1{
+    font-weight:bolder;
+    font-size: 1.5rem;
+}
+.cad-textos{
+    height: 15vh;
+    font-size: large;
+    text-align: justify;
+    
+}
+
+#info-botao{
+    font-size: small ;
+    font-weight:bolder;
+}
+.btn-voltar{
+    padding: 8%;
+    width: 6rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: aliceblue;
+    background: #0C223D;
+    border: #cbcedd solid 3px;
+    
+}
+/*formulario de cadastro*/
+.form-container{
+    width: 100%;
+}
+.form-prefeitura{
+    width: 100%;
+    gap: 16px;
+}
+
+#btn-cadastro{
+    padding: 8%;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 1.2rem;
+    color: aliceblue;
+    background: #3F8EBF;
+    border: #cbcedd solid 3px;
+}
+.form-cad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-dado{
+    gap: 12px;
+    margin: 2%;
+    font-size: large;
+    font-weight:bold;
+}
+.info-input{
+    width: 62vw;
+    border-radius: 2rem;
+    padding: 4px 10px;
+}
+
+.botao:hover {
+    background: #2466BC;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+} 
+
+.mensagem-erro {
+    display: block;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #ff6b6b;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 107, 107, 0.2);
+    border-radius: 0.5rem;
+    width: 200px;
+    text-align:justify;
+    border: 1px solid #ff6b6b41 !important;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.info-input.error {
+    border: 2px solid #ff6b6b !important;
+    color: #cbcedd;
+    background-color: rgba(192, 109, 109, 0.384);
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+.info-input.error:focus {
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.3);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+#cadastro-area .mensagem-erro {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#cadastro-area .mensagem-erro {
+    background-color: rgba(255, 107, 107, 0.15);
+}
+
+/*organização-cadastro*/
+#cadastro-info{
+    background: #2466BC;
+    
+    
+}
+
+
+/*footer*/
+
+footer {
+    background-color:#010A26;
+    color: #cbcedd;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+@media (max-width:1023px) {
+/*organização-cadastro*/
+.cadastro-campo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+}
+
+
+@media (min-width:1024px) {
+.cad-textos{
+    height: 60vh;
+    font-size: x-large;
+    text-align: justify;
+    
+}
+#info-botao{
+    font-size: large;
+    font-weight:bolder;
+}
+.btn-voltar{
+    padding: 8%;
+    width: 10rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    
+}
+.cad-infos{
+    gap:34px;
+}
+.cad-infos h1{
+    font-size:1.7rem;
+}
+.cadastro{
+    padding: 12%;
+    border-radius: 2.3rem;
+
+}
+.info-input{
+    width: 32vw;
+    border-radius: 2rem;
+    padding: 6px 12px;
+}
+.cadastro-campo{
+    width: 76vw;
+    border-radius: 2.5rem;
+}
+#btn-cadastro{
+    padding: 6%;
+    width: 12rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+}
+#cadastro-area .mensagem-erro {
+    width: 32vw;
+}
+
+
+/*grid-cadastro*/
+.cadastro-campo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#cadastro-info{
+    grid-column: 1/2;
+    grid-row:1/4 ;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #2466BC;
+}
+#cadastro-area{
+    grid-column: 2/4;
+    grid-row:1/4 ;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    
+}
+
+}
