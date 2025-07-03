@@ -9,7 +9,7 @@ class ProblemStatistics {
     // Carregar dados do servidor
     async loadFromServer() {
         try {
-            const response = await fetch('http://localhost:3000/problemas_urbanos');
+            const response = await fetch('https://move-wave.onrender.com/problemas_urbanos');
             if (response.ok) {
                 const data = await response.json();
                 this.stats = data.estatisticas || {};
@@ -38,7 +38,7 @@ class ProblemStatistics {
                 historico: this.history
             };
             
-            await fetch('http://localhost:3000/problemas_urbanos', {
+            await fetch('https://move-wave.onrender.com/problemas_urbanos', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -225,4 +225,4 @@ function initializePrefectureDashboard() {
 // Auto-inicialização se estiver na página da prefeitura
 if (document.title.includes('Prefeitura') || window.location.pathname.includes('prefeitura')) {
     document.addEventListener('DOMContentLoaded', initializePrefectureDashboard);
-} 
+}

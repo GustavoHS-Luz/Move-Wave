@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para salvar post no servidor
     async function savePostToServer(postData) {
         try {
-            const response = await fetch('http://localhost:3000/posts', {
+            const response = await fetch('https://move-wave.onrender.com/posts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

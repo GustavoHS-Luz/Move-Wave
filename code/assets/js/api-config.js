@@ -1,6 +1,6 @@
 // Configuração centralizada da API
 const API_CONFIG = {
-    BASE_URL: 'http://localhost:3000',
+    BASE_URL: 'https://move-wave.onrender.com',
     ENDPOINTS: {
         USUARIOS: '/usuarios',
         POSTS: '/posts',
@@ -77,4 +77,4 @@ class ApiService {
             throw error;
         }
     }
-} 
+}

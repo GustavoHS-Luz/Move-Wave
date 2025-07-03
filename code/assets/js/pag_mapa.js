@@ -242,7 +242,7 @@ map.on('click', function(ev){
 
 async function marcarEnchentesAtivas() {
     try {
-        const response = await fetch('http://localhost:3000/posts');
+        const response = await fetch('https://move-wave.onrender.com/posts');
         if (!response.ok) return;
         const posts = await response.json();
         // Filtrar posts de enchente ativos

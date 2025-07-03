@@ -3,7 +3,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 
 const postsPath = path.join(__dirname, 'posts.json'); // Ajuste o caminho se necessário
-const apiUrl = 'http://localhost:3000/posts';
+const apiUrl = 'https://move-wave.onrender.com/posts';
 
 async function migrate() {
   let enviados = 0, erros = 0;
@@ -37,4 +37,4 @@ async function migrate() {
   console.log(`Migração concluída! Enviados: ${enviados} | Erros: ${erros}`);
 }
 
-migrate(); 
+migrate();

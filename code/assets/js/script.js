@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrega posts apenas da API
     async function loadPosts() {
         try {
-            const response = await fetch('http://localhost:3000/posts');
+            const response = await fetch('https://move-wave.onrender.com/posts');
             if (response.ok) {
                 posts = await response.json();
                 renderPosts();
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Função para adicionar novo post na API
     async function addNewPost(postData) {
         try {
-            const response = await fetch('http://localhost:3000/posts', {
+            const response = await fetch('https://move-wave.onrender.com/posts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const postIndex = posts.findIndex(p => p.id == postId);
             if (postIndex === -1) return;
             const updatedPost = { ...posts[postIndex], ...updates };
-            await fetch(`http://localhost:3000/posts/${postId}`, {
+            await fetch(`https://move-wave.onrender.com/posts/${postId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Exclusão de posts na API
     async function deletePost(postId) {
         try {
-            await fetch(`http://localhost:3000/posts/${postId}`, {
+            await fetch(`https://move-wave.onrender.com/posts/${postId}`, {
                 method: 'DELETE'
             });
             await loadPosts();

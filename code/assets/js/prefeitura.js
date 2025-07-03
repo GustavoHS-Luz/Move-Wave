@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Função para carregar dados do servidor
     async function loadDataFromServer() {
         try {
-            const response = await fetch('http://localhost:3000/problemas_urbanos');
+            const response = await fetch('https://move-wave.onrender.com/problemas_urbanos');
             if (response.ok) {
                 const data = await response.json();
                 stats = {
@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     async function atualizarDashboardCompleta() {
         let postsFromAPI = [];
         try {
-            const response = await fetch('http://localhost:3000/posts');
+            const response = await fetch('https://move-wave.onrender.com/posts');
             if (response.ok) {
                 postsFromAPI = await response.json();
             }
