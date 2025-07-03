@@ -1,11 +1,110 @@
-```html
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pag_mapa.html">Mapa</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="informacoes.html">Informações</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="acesso_prefeitura.html">Acesso da prefeitura</a>
-                      </li>
-```
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html"><img src="movewave-logo.png" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="comentarios.html">Mobitech Connect</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="pag_mapa.html">Mapa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="informacoes.html">Informações</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="acesso_prefeitura.html">Acesso da prefeitura</a>
+                            </li>    
+                        </ul>
+                        <!-- Ícone de login no canto direito -->
+                        <div class="d-flex">
+                            <a href="pag_login.html" class="nav-link text-light" id="user-icon-link">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <a href="#" class="nav-link text-light" id="settings-icon-link" style="display:none;">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="home-content">
+            <section class="home-hero">
+                <img src="img_home.jpeg" alt="Imagem de enchente urbana" class="img-hero">
+                <div class="hero-text">
+                    <h1>MoveWave</h1>
+                    <h2>Solução para enchentes urbanas</h2>
+                </div>
+            </section>
+            <section class="projeto-section">
+                <div class="projeto-texto">
+                    <h2>Projeto</h2>
+                    <p class="justificado">Belo Horizonte enfrenta sérios desafios relacionados à mobilidade urbana, especialmente durante o período de chuvas. As enchentes dificultam o deslocamento e colocam em risco a segurança de pedestres e motoristas. Além disso, a ausência de canais eficientes para que os cidadãos comuniquem esses problemas em tempo real dificulta a atuação rápida das autoridades. Sendo assim, o MoveWave surge como uma solução para esse cenário, com o objetivo de aproximar a população do poder público por meio de uma plataforma colaborativa de denúncias e mapeamento de ocorrências urbanas, a fim de tornar a gestão da cidade mais participativa, transparente e ágil.</p>
+                    <p class="publico-alvo">O público-alvo deste projeto abrange tanto os moradores da cidade, que convivem com esses desafios diariamente, quanto os órgãos públicos responsáveis pela manutenção e planejamento urbano.</p>
+                    <div class="prevencao">
+                        <h3>Informações de Prevenção</h3>
+                        <p>Durante o período chuvoso, é essencial que todos estejam atentos a medidas preventivas contra enchentes. Evitar áreas de risco, acompanhar os alertas da Defesa Civil, não tentar atravessar ruas alagadas e manter os bueiros próximos desobstruídos são atitudes que podem salvar vidas. Pensando nisso, reunimos informações importantes para ajudar você a se proteger e agir com responsabilidade nesses momentos.</p>
+                    </div>
+                    <div class="saiba-mais-container">
+                        <a href="informacoes.html" class="btn-saiba-mais">SAIBA MAIS</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>© 2025 Mobitech Urban. Todos os direitos reservados.</p>
+                </div>
+                <div class="address">
+                    <p>Avenida Dom José Gaspar, 500, Belo Horizonte – MG</p>
+                </div>
+                <div class="contact">
+                    <p>(31) 4556-2025 | atendimento@mobtechurban.com.br</p>
+                </div>
+                <div class="social-media">
+                    <span>Signore:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="user-popup" class="user-popup" style="display:none;">
+      <div class="user-popup-content">
+        <div class="user-popup-title">Configurações do Usuário</div>
+        <div class="user-email">usuário@exemplo.com</div>
+        <button class="user-change-password">Alterar Senha</button>
+        <button class="user-logout">Sair</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
